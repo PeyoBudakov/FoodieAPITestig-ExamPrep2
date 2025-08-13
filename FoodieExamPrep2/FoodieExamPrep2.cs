@@ -57,7 +57,7 @@ namespace FoodieExamPrep2
             }
         }
 
-
+        [OneTimeTearDown] public void TearDown() { this.client.Dispose(); }
 
         [Test, Order(1)]
         public void CreateNewIdea_WithCorrectData_ShouldSucceed()
